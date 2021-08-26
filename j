@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-file='/home/rahul/.jumps'
+file='~/.jumps'
 # file='.jumps'
 jumpString=$1
 temp='.jump_temp'
