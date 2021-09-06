@@ -37,6 +37,11 @@ then
         if [ "$#" -lt 3 ]; then 
             echo -e "Argument expected\nformat:\n\tj --add jumpString Directory"
         else
+            # adding current directory using '.'
+            if [ "$3" == "." ]; then
+                $3=pwd
+            fi
+
             # echo $2,$3
            echo "$2  $3" >> $file
            echo "jumpString added : $2"
@@ -67,6 +72,18 @@ then
             echo -e "format:\n\tj --del jumpString"
         fi
     fi
+
+# adding last directory
+elif [ "$1" == "." ]; then
+    # if there is second string    
+    # awk -v jumpString="$2" '{if($1!=jumpString){print $0;} else {flag="1";echo pritrse;} }' $file > temp && mv temp $file 
+    str="-"
+    while read -r line;
+    do
+      [[ ! $line =~ $str ]] && echo "$line"
+    done < $file  > $temp
+    echo "- `pwd`" >> $temp
+    mv $temp $file
 
 # string is a jumpString
 else
