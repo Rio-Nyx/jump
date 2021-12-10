@@ -1,6 +1,7 @@
 # Jump
 
 Helps in jumping between directories
+works like bookmarks
 * written in bash
 
 ```
