@@ -8,5 +8,8 @@ works like bookmarks
   j --add [short_name] [full_directory]
 
   j --del [short_name]
-  
+
+  j --list 
+
   j [short_name]
+
