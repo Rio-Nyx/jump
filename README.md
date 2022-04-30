@@ -31,7 +31,7 @@ works like bookmarks
   j ,
   
   // adds current directory with user given jump string
-  j -a [jump_string] .
+  j -a [jump_string]
 ```
 ## Requiremnts
 * bash
